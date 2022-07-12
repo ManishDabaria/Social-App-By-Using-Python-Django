@@ -48,11 +48,11 @@ def index(request):
     username_profile_list = []
 
     for users in final_suggestions_list:
-        username_profile.append()
+        username_profile.append(users.id)
     
     for ids in username_profile:
         profile_lists = Profile.objects.filter(id_user=ids)
-        username_profile_list.append(users.id)
+        username_profile_list.append(profile_lists)
     
     suggestions_username_profile_list = list(chain(*username_profile_list))
     
